@@ -1,6 +1,8 @@
 package com.example.daniel.aluguelcarro.models;
 
 import com.orm.SugarRecord;
+import android.database.sqlite.*;
+import com.orm.SugarApp;
 
 /**
  * Created by daniel on 13/03/17.

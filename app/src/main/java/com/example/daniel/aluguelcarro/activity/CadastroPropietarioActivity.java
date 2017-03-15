@@ -1,4 +1,4 @@
-package com.example.daniel.aluguelcarro;
+package com.example.daniel.aluguelcarro.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -9,18 +9,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.daniel.aluguelcarro.R;
 import com.example.daniel.aluguelcarro.models.Propietario;
 
 public class CadastroPropietarioActivity extends AppCompatActivity {
-    private EditText idPropietario, idEndereco, idTelefone, idData;
+    EditText idPropietario, idEndereco, idTelefone, idData;
+    Button btnSalvar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_propietario);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         idPropietario = (EditText) findViewById(R.id.idPropietario);
         idEndereco = (EditText) findViewById(R.id.idEndereco);
@@ -28,16 +29,20 @@ public class CadastroPropietarioActivity extends AppCompatActivity {
         idData = (EditText) findViewById(R.id.idData);
 
 
-        Button btnSalvar = (Button) findViewById(R.id.btnSalvar);
+        btnSalvar = (Button) findViewById(R.id.btnSalvar);
 
 
-        btnSalvar.setOnClickListener(new View.OnClickListener() {
+        btnSalvar.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Propietario p = new Propietario(idPropietario.getText().toString(), idEndereco.getText().toString(), idTelefone.getText().toString(), idData.getText().toString());
-                p.save();
+                salvar();
             }
-    });
-
-}
+        });
+    }
+    public void salvar() {
+        Propietario p = new Propietario(idPropietario.getText().toString(), idEndereco.getText().toString(), idTelefone.getText().toString(), idData.getText().toString());
+        p.save();
+        Toast.makeText(this, "Local Cadastrado", Toast.LENGTH_LONG).show();
+        this.finish();
+    }
 }

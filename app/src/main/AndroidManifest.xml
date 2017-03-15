@@ -11,12 +11,12 @@
         android:name="com.orm.SugarApp">
 
         <meta-data android:name="DATABASE" android:value="aluguelCarro.db" />
-        <meta-data android:name="VERSION" android:value="1" />
+        <meta-data android:name="VERSION" android:value="2" />
         <meta-data android:name="QUERY_LOG" android:value="false" />
-        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.example.daniel.aluguelcarro" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.example.daniel.aluguelcarro"/>
 
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CadastroPropietarioActivity"
+            android:name=".activity.CadastroPropietarioActivity"
             android:label="@string/title_activity_cadastro_propietario"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
