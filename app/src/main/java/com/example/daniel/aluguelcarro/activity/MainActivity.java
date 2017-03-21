@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btnListaPropietario = (Button) findViewById(R.id.btnlistaPropietario);
+        Button btnListaVeiculo = (Button) findViewById(R.id.btnListaveiculo);
 
         btnListaPropietario.setOnClickListener(new View.OnClickListener(){
 
@@ -23,6 +24,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, CadastroPropietarioActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+        btnListaVeiculo.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CadastroVeiculoActivity.class);
                 startActivity(intent);
 
             }

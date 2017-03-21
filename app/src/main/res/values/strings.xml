@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">AluguelCarro</string>
     <string name="title_activity_cadastro_propietario">CadastroPropietarioActivity</string>
+    <string name="title_activity_lista_propietario">ListaPropietarioActivity</string>
+    <string name="tvNomePropietario">tvNomePropietario</string>
+    <string name="Nome">tvNomePropietario</string>
+    <string name="tvEndereco">Endereço</string>
+    <string name="tvTelefone">Telefone</string>
+    <string name="tvData">Data</string>
 </resources>

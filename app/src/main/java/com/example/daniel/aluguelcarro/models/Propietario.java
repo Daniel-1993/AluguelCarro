@@ -2,12 +2,16 @@ package com.example.daniel.aluguelcarro.models;
 
 import com.orm.SugarRecord;
 import android.database.sqlite.*;
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.orm.SugarApp;
 
 /**
  * Created by daniel on 13/03/17.
  */
-public class Propietario extends SugarRecord {
+public class Propietario extends SugarRecord implements Parcelable{
+
     private String nomePropietario;
     private String endereco;
     private String telefone;
@@ -25,7 +29,16 @@ public class Propietario extends SugarRecord {
 
     }
 
-    public String getNomePropietario() {
+        protected Propietario(Parcel in) {
+            nomePropietario = in.readString();
+            endereco = in.readString();
+            telefone = in.readString();
+            data = in.readString();
+        }
+
+
+
+        public String getNomePropietario() {
         return nomePropietario;
     }
 
@@ -56,4 +69,39 @@ public class Propietario extends SugarRecord {
     public void setData(String data) {
         this.data = data;
     }
+
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeString(nomePropietario);
+            dest.writeString(endereco);
+            dest.writeString(telefone);
+            dest.writeString(data);
+
+        }
+
+        public static final Creator<Propietario> CREATOR = new Creator<Propietario>() {
+            @Override
+            public Propietario createFromParcel(Parcel in) {
+                return new Propietario(in);
+            }
+
+            @Override
+            public Propietario[] newArray(int size) {
+                return new Propietario[size];
+            }
+        };
+
+    @Override
+    public String toString()
+    {
+        return nomePropietario;
+    }
+
+
 }
+

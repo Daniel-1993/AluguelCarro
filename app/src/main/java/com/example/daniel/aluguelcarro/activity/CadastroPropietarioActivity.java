@@ -42,7 +42,7 @@ public class CadastroPropietarioActivity extends AppCompatActivity {
     public void salvar() {
         Propietario p = new Propietario(idPropietario.getText().toString(), idEndereco.getText().toString(), idTelefone.getText().toString(), idData.getText().toString());
         p.save();
-        Toast.makeText(this, "Local Cadastrado", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Propietario Cadastrado com sucesso", Toast.LENGTH_LONG).show();
         this.finish();
     }
 }
