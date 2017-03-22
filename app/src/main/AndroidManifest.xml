@@ -37,7 +37,11 @@
             android:name=".activity.ListaPropietarioActivity"
             android:label="@string/title_activity_lista_propietario"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.CadastroVeiculoActivity"></activity>
+        <activity android:name=".activity.CadastroVeiculoActivity" />
+        <activity
+            android:name=".activity.ListaVeiculoActivity"
+            android:label="@string/title_activity_lista_veiculo"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -7,4 +7,5 @@
     <string name="tvEndereco">Endereço</string>
     <string name="tvTelefone">Telefone</string>
     <string name="tvData">Data</string>
+    <string name="title_activity_lista_veiculo">ListaVeiculoActivity</string>
 </resources>

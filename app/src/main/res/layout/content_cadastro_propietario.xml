@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/tvNomePropietario"
+        android:text="Nome"
         android:id="@+id/tvNomePropietario"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -27,7 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Propietario"
         android:ems="10"
         android:id="@+id/idPropietario" />
 
@@ -42,7 +41,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Endereço"
         android:ems="10"
         android:id="@+id/idEndereco" />
 
@@ -57,7 +55,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Telefone"
         android:ems="10"
         android:id="@+id/idTelefone" />
 
@@ -72,7 +69,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Data"
         android:ems="10"
         android:id="@+id/idData" />
 
